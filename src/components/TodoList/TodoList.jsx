@@ -3,7 +3,7 @@ import AddTodo from '../AddTodo/AddTodo';
 import Todo from '../Todo/Todo';
 
 
-export default function TodoList() {
+export default function TodoList({ filter }) {
     const [todos, setTodos] = useState([
         { id: '123', text: '프언론 과제', status: 'active' },
         { id: '124', text: '프언론 복습', status: 'active' }
@@ -17,11 +17,12 @@ export default function TodoList() {
     const handleDelete = (deleted) => {// 삭제하고자하는 id가 아닌 경우만 filter해서 새로운 배열 만듦
         setTodos(todos.filter(t => t.id !== deleted.id));
     };
+    const filtered = getFilteredItems(todos, filter);
     return (
         <section>
             <ul>
                 {
-                    todos.map((item) => (<Todo 
+                    filtered.map((item) => (<Todo  // 필터링된 아이템들만 보여지도록
                         key={item.id} todo={item} 
                         onUpdate={handleUpdate} onDelete={handleDelete} 
                         />
@@ -30,4 +31,10 @@ export default function TodoList() {
             <AddTodo onAdd={handleAdd} />
         </section>
     );
+}
+function getFilteredItems(todos, filter) {
+    if(filter === 'all' ) {
+        return todos;
+    }
+    return todos.filter((todo) => todo.status === filter);
 }
