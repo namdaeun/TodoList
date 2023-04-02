@@ -7,11 +7,11 @@ const filters = ['all', 'active', 'completed']
 export default function App() {
   const [filter, setFilter] = useState(filters[0]); // 처음에는 다 보여줌
   return (
-    <div>
+    <>
       <Header filters={filters} filter={filter} 
       onFilterChange={setFilter}/>
       <TodoList filter={filter}/>
-    </div>
+    </>
   );
 }
 

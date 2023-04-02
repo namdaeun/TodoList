@@ -1,0 +1,12 @@
+.container {
+    height: 100%;
+    min-height: 0; /*화면을 넘어가는 경우가 없도록*/
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg); /* 메뉴보다 좀 더 밝은 색으로*/
+}
+
+.list {
+    flex: 1 1 auto; /* 투두 작성하는 부분 밑에 위치 */
+    overflow-y: auto; 
+}
