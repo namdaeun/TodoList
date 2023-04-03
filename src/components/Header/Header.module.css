@@ -1,10 +1,25 @@
 .header {
     display: flex;
     justify-content: space-between; /*로고와 filter들의 집합 사이 간격을 띄움*/
+    padding: 0 0.5rem;
     align-items: center;
     background-color: var(--color-bg-dark);
     border-bottom: 1px solit var(--color-gray);
 }
+
+.toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-text);
+    transition: all 150ms;
+}
+
+.toggle:hover {
+    transform: scale(1.1);
+    color: var(--color-accent);
+}
+
 .filters {
     display: flex;
 }
