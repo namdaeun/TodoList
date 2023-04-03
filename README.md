@@ -41,12 +41,14 @@
        <tr>
         <td>
             <ul>
-              <li>완료되지 않은 일(체크표시되지 않은 일)은 Active에 저장된다</li>
+               <h4>Completed</h4>
+              <li>완료된 일(체크표시된 일)은 Completed에 저장된다</li>
             <ul>
         </td>
         <td>
             <ul>
-              <li>완료된 일(체크표시된 일)은 Completed에 저장된다</li>
+                <h4>Active</h4>
+              <li>완료되지 않은 일(체크표시되지 않은 일)은 Active에 저장된다</li>
             </ul>
         </td>
     </tr>
