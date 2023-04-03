@@ -8,24 +8,28 @@ export default function TodoList({ filter }) {
         { id: '123', text: '프언론 과제', status: 'active' },
         { id: '124', text: '프언론 복습', status: 'active' }
     ]);
-    const handleAdd = (todo) => {// 새로운 투두를 todos에 update
-        setTodos([...todos, todo]);
-    };
-    const handleUpdate = (updated) => {// 기존의 id와 update되는 id가 같으면 update된 걸 씀
-        setTodos(todos.map((t) => t.id === updated.id ? updated : t));
-    };
-    const handleDelete = (deleted) => {// 삭제하고자하는 id가 아닌 경우만 filter해서 새로운 배열 만듦
-        setTodos(todos.filter(t => t.id !== deleted.id));
-    };
+    const handleAdd = (todo) => setTodos([...todos, todo]); // 새로운 투두를 todos에 update
+    const handleUpdate = (updated) =>  // 기존의 id와 update되는 id가 같으면 update된 걸 씀
+        setTodos(todos.map((t) => (t.id === updated.id ? updated : t)));
+    const handleDelete = (deleted) =>  // 삭제하고자하는 id가 아닌 경우만 filter해서 새로운 배열 만듦
+        setTodos(todos.filter((t) => t.id !== deleted.id)); 
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+        // todos라는 key에 todos를 JSON형태로 변경한 것을 저장
+    }, [todos]) // todos가 변경이 될 때마다
+
     const filtered = getFilteredItems(todos, filter);
     return (
         <section className={styles.container}>
             <ul className={styles.list}>
-                {
-                    filtered.map((item) => (<Todo  // 필터링된 아이템들만 보여지도록
-                        key={item.id} todo={item} 
-                        onUpdate={handleUpdate} onDelete={handleDelete} 
-                        />
+                {filtered.map((item) => (
+                    <Todo  // 필터링된 아이템들만 보여지도록
+                        key={item.id} 
+                        todo={item} 
+                        onUpdate={handleUpdate} 
+                        onDelete={handleDelete} 
+                    />
                 ))}
             </ul>
             <AddTodo onAdd={handleAdd} />
