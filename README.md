@@ -25,8 +25,7 @@
             <h4>완료한 일 체크</h4>
             <ul>
               <li>완료한 일은 체크 표시</li>
-              <li>완료된 일(체크표시된 일)은 Completed에 저장된다</li>
-              <li>완료되지 않은 일(체크표시되지 않은 일)은 Active에 저장된다</li>
+              <li>체크 여부에 따라 active, completed로 나뉨</li>
             </ul>
         </td>
     </tr>
@@ -61,6 +60,10 @@
         </td>
        </tr>
       <tr align = "center">
-        <td colspan='2'><h4>다크모드 구현</h4></td>
+        <td colspan='2'>
+        <ul>
+        다크모드 구현
+        </ul>
+        </td>
       </tr>
 <table>
