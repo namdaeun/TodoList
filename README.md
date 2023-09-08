@@ -16,38 +16,33 @@
     </tr>
     <tr>
         <td>
-            <h4>할 일 추가하기</h4>
             <ul>
+            <h4>할 일 추가하기</h4>
               <li>엔터 혹은 Add 버튼을 통해 할 일 추가하기</li>
             <ul>
         </td>
         <td>
-            <h4>완료한 일 체크</h4>
             <ul>
+             <h4>완료한 일 체크</h4>
               <li>완료한 일은 체크 표시</li>
               <li>체크 여부에 따라 active, completed로 나뉨</li>
             </ul>
         </td>
     </tr>
         <tr>
-        <td width="50%">
-            <img width= "100%" src="https://achieved-syzygy-75c.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6ee63606-c8ff-42f4-96ba-7f57f112b7a7%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-04-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_2.05.07.png?id=d16a3e84-2014-4626-a238-055faaeb899b&table=block&spaceId=3e75a0a4-4d89-445f-aabb-ab8c8edc61f8&width=1800&userId=&cache=v2"?raw=true">
-        </td>
-        <td width="50%">
-            <img width="100%" src="https://achieved-syzygy-75c.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9fabd921-cafa-4ee0-b6cb-7c44a186b9b2%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-04-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_2.05.00.png?id=a74d67a8-f85b-4822-bbd8-a86c4d9f296c&table=block&spaceId=3e75a0a4-4d89-445f-aabb-ab8c8edc61f8&width=1800&userId=&cache=v2"?raw=true">
-        </td>
-       </tr>
        <tr>
         <td>
             <ul>
-               <h4>Completed</h4>
+                <h4>Completed</h4>
               <li>완료된 일(체크표시된 일)은 Completed에 저장된다</li>
+                <br>
             <ul>
         </td>
         <td>
             <ul>
                 <h4>Active</h4>
               <li>완료되지 않은 일(체크표시되지 않은 일)은 Active에 저장된다</li>
+                <br>
             </ul>
         </td>
     </tr>
